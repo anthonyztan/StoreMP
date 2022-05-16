@@ -1,4 +1,11 @@
 <template>
+<nav>
+  <a href="">Store</a> |
+  <a href="">My Products</a> |
+  <a href="">Add Product</a> |
+  <a href="">Login</a> |
+  <a href="">Register</a>
+</nav>
 <div>
   <h1>STORE</h1>
   <div class = "row">
