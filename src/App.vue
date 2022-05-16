@@ -1,37 +1,20 @@
 <template>
 <nav>
-  <a href="">Store</a> |
-  <a href="">My Products</a> |
-  <a href="">Add Product</a> |
-  <a href="">Login</a> |
-  <a href="">Register</a>
+  <router-link to="/store">Store</router-link> |
+  <router-link to="/myproducts">My Products</router-link> |
+  <router-link to="/">Add Product</router-link> |
+  <router-link to="/">Log-in</router-link> |
+  <router-link to="/">Register</router-link>
 </nav>
-<div>
-  <h1>STORE</h1>
-  <div class = "row">
-    <div class = "column" v-for = "product in productList" :key = "product.name">
-      <product-card :item="product"></product-card>
-    </div>
-  </div>    
-</div>
+<router-view />
 </template>
 
 <script>
-import ProductCard from './components/ProductCard.vue'
 
 export default {
   name: 'App',
   components: {
-    ProductCard
-  },
-  data () {
-    return {
-      productList: [
-        {name: 'Glasses', price: '24.99', desc: 'To see better'},
-        {name: 'Mouse', price: '20.00', desc: 'Computer mouse'}
-      ]
-    }
-  },
+  }
 }
 </script>
 
